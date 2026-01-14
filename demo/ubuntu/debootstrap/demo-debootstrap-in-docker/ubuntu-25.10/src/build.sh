@@ -64,6 +64,45 @@ mod_build_create_base_rootfs () {
 
 }
 
+mod_build_archive_base_rootfs () {
+
+	echo
+	echo "run: archive-rootfs"
+	echo
+
+	cd ../build/img
+
+	tar --create --auto-compress --file ../out/rootfs.tar.gz .
+
+	cd "${OLDPWD}"
+
+}
+
+mod_build_cp_rootfs_archive_to_port_dir () {
+
+	echo
+	echo "run: copy-to-port"
+	echo
+
+	sudo mkdir -p /port
+
+	if ! [ -f ../build/out/rootfs.tar.gz ]; then
+		echo
+		echo "File Not Exist: ../build/out/rootfs.tar.gz"
+		echo
+		return 0
+	fi
+
+	cp -rfT ../build/out/rootfs.tar.gz /port/rootfs.tar.gz
+
+
+	echo
+	echo "tips: please check port dir"
+	echo
+
+
+}
+
 
 
 
@@ -76,6 +115,10 @@ mod_build_main ()  {
 	mod_build_prepare
 
 	mod_build_create_base_rootfs
+
+	mod_build_archive_base_rootfs
+
+	mod_build_cp_rootfs_archive_to_port_dir
 
 }
 
