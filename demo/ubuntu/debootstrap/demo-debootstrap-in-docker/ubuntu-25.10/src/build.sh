@@ -72,7 +72,7 @@ mod_build_archive_base_rootfs () {
 
 	cd ../build/img
 
-	tar --create --auto-compress --file ../out/rootfs.tar.gz .
+	tar --create --auto-compress --file ../out/rootfs.tar.gz ./*
 
 	cd "${OLDPWD}"
 
