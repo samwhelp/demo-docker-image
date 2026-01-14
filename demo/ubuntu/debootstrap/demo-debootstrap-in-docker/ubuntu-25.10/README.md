@@ -31,3 +31,26 @@ Example:
 	$ make box-run-portal
 
 ```
+
+
+
+
+## Steps
+
+> run to build docker image
+
+``` sh
+make box-build
+```
+
+> then run to build rootfs archive in docker
+
+``` sh
+make box-run-portal
+```
+
+> check port dir
+
+``` sh
+ls -1 port
+```
