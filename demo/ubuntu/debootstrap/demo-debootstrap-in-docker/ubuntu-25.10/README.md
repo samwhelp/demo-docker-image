@@ -37,13 +37,13 @@ Example:
 
 ## Steps
 
-> run to build docker image
+> run to build docker-image
 
 ``` sh
 make box-build
 ```
 
-> then run to build rootfs archive in docker
+> then run to build rootfs-archive in docker
 
 ``` sh
 make box-run-portal
