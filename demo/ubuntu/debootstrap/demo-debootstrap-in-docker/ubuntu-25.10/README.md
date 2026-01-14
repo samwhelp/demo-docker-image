@@ -37,6 +37,8 @@ Example:
 
 ## Steps
 
+## Steps / Build
+
 > run to build docker-image
 
 ``` sh
@@ -53,4 +55,21 @@ make box-run-portal
 
 ``` sh
 ls -1 port
+```
+
+
+
+
+## Steps / to Docker Image
+
+> import ./port/rootfs.tar.gz to new docker-image
+
+``` sh
+./to-docker-image.sh
+```
+
+> run new docker-image
+
+``` sh
+./test-docker-image.sh
 ```
