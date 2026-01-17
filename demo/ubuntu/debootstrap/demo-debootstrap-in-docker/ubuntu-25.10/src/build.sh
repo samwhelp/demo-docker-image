@@ -85,7 +85,7 @@ mod_build_archive_base_rootfs () {
 	echo "run: archive-rootfs"
 	echo
 
-	tar -C ../build/img -cf build/out/rootfs.tar.gz .
+	tar -C ../build/img -cf ../build/out/rootfs.tar.gz .
 
 }
 
