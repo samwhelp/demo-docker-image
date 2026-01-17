@@ -64,7 +64,7 @@ mod_build_create_base_rootfs () {
 
 }
 
-mod_build_archive_base_rootfs () {
+mod_build_archive_base_rootfs_v001 () {
 
 	echo
 	echo "run: archive-rootfs"
@@ -76,6 +76,16 @@ mod_build_archive_base_rootfs () {
 	tar --create --auto-compress --file ../out/rootfs.tar.gz .
 
 	cd "${OLDPWD}"
+
+}
+
+mod_build_archive_base_rootfs () {
+
+	echo
+	echo "run: archive-rootfs"
+	echo
+
+	tar -C ../build/img -cf ../out/rootfs.tar.gz .
 
 }
 
