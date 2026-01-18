@@ -11,8 +11,8 @@
 
 ## Subject
 
-* [Demo](#Demo)
-* [Link](#Link)
+* [Demo](#demo)
+* [Link](#link)
 
 
 
