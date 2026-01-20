@@ -20,5 +20,5 @@
 mkdir -p ./port
 
 ## work for debootstrap in docker (--privileged)
-#podman run -it -v ./port:/port --rm --replace --privileged --name debian-iso-factory-13-run debian-iso-factory-13
-podman run -it -v ./port:/port --replace --privileged --name debian-iso-factory-13-run debian-iso-factory-13
+#podman run -it --rm --replace --privileged -v ./port:/port --name debian-iso-factory-13-run debian-iso-factory-13
+podman run -it --replace --privileged -v ./port:/port --name debian-iso-factory-13-run debian-iso-factory-13
