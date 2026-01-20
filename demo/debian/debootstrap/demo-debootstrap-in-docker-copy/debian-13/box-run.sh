@@ -31,8 +31,8 @@ REF_BUILD_DIR_PATH="${REF_PLAN_DIR_PATH}/build"
 mkdir -p "${REF_PORT_DIR_PATH}"
 
 ## work for debootstrap in docker (--privileged)
-#podman run -it --rm --replace --privileged -v "${REF_PORT_DIR_PATH}:/port" -w "/opt/prj" --name "debian-iso-factory-13-run" "debian-iso-factory-13"
-podman run -it --replace --privileged -v "${REF_PORT_DIR_PATH}:/port" -w "/opt/prj" --name "debian-iso-factory-13-run" "debian-iso-factory-13"
+#podman run -it --rm --replace --privileged -v "${REF_PORT_DIR_PATH}:/port" -w "/opt/prj/src" --name "debian-iso-factory-13-run" "debian-iso-factory-13"
+podman run -it --replace --privileged -v "${REF_PORT_DIR_PATH}:/port" -w "/opt/prj/src" --name "debian-iso-factory-13-run" "debian-iso-factory-13"
 
 
 

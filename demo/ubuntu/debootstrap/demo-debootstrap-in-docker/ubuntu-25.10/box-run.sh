@@ -31,8 +31,8 @@ REF_BUILD_DIR_PATH="${REF_PLAN_DIR_PATH}/build"
 mkdir -p "${REF_PORT_DIR_PATH}"
 
 ## work for debootstrap in docker (--privileged)
-#podman run -it --rm --replace --privileged -v "${REF_PORT_DIR_PATH}:/port" -v "${REF_PLAN_DIR_PATH}:/opt/prj" -w "/opt/prj" --name "ubuntu-iso-factory-25.10-run" "ubuntu-iso-factory-25.10"
-podman run -it --replace --privileged -v "${REF_PORT_DIR_PATH}:/port" -v "${REF_PLAN_DIR_PATH}:/opt/prj" -w "/opt/prj" --name "ubuntu-iso-factory-25.10-run" "ubuntu-iso-factory-25.10"
+#podman run -it --rm --replace --privileged -v "${REF_PORT_DIR_PATH}:/port" -v "${REF_PLAN_DIR_PATH}/src:/opt/prj/src" -w "/opt/prj/src" --name "ubuntu-iso-factory-25.10-run" "ubuntu-iso-factory-25.10"
+podman run -it --replace --privileged -v "${REF_PORT_DIR_PATH}:/port" -v "${REF_PLAN_DIR_PATH}/src:/opt/prj/src" -w "/opt/prj/src" --name "ubuntu-iso-factory-25.10-run" "ubuntu-iso-factory-25.10"
 
 
 
