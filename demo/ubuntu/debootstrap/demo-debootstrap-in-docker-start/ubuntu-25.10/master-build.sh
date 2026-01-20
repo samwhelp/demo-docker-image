@@ -50,4 +50,4 @@ rm -rf ./build
 mkdir -p ./port
 
 ## work for debootstrap in docker (--privileged)
-podman run -it --rm --privileged -v "${REF_PLAN_DIR_PATH}/port:/port" -v "${REF_PLAN_DIR_PATH}:/opt/prj" "${REF_MASTER_BOX_DISTRO_NAME}" /opt/prj/src/build.sh
+podman run -it --replace --privileged -v "${REF_PLAN_DIR_PATH}/port:/port" -v "${REF_PLAN_DIR_PATH}:/opt/prj" --name ubuntu-iso-factory-25.10-run "${REF_MASTER_BOX_DISTRO_NAME}" /opt/prj/src/build.sh
