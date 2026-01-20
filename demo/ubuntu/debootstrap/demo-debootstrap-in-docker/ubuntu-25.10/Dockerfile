@@ -22,7 +22,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ## ## Source
 ##
 
-COPY src /opt/src
+COPY src /opt/prj/src
 
 
 
