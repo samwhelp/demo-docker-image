@@ -25,16 +25,6 @@ REF_BUILD_DIR_PATH="${REF_PLAN_DIR_PATH}/build"
 
 
 ##
-## ## Master
-##
-
-REF_MASTER_BOX_DISTRO_NAME="debian:13"
-#REF_MASTER_BOX_DISTRO_NAME="debian:latest"
-
-
-
-
-##
 ## ## Clean
 ##
 
