@@ -11,9 +11,9 @@ help:
 	@echo '	$$ make help'
 	@echo
 	@echo '	$$ make box-build'
-	@echo
 	@echo '	$$ make box-run'
-	@echo '	$$ make box-run-portal'
+	@echo
+	@echo '	$$ make master-build'
 	@echo
 .PHONY: help
 
@@ -25,13 +25,11 @@ box-build:
 .PHONY: box-build
 
 
-
-
 box-run:
 	./box-run.sh
 .PHONY: box-run
 
 
-box-run-portal:
-	./box-run-portal.sh
-.PHONY: box-run-portal
+master-build:
+	./master-build.sh
+.PHONY: master-build

@@ -26,9 +26,9 @@ Example:
 	$ make help
 
 	$ make box-build
-
 	$ make box-run
-	$ make box-run-portal
+
+	$ make master-build
 
 ```
 
@@ -48,7 +48,7 @@ make box-build
 > then run to build rootfs-archive in docker
 
 ``` sh
-make box-run-portal
+make master-build
 ```
 
 > check port dir
