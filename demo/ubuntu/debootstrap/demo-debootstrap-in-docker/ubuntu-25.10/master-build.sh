@@ -3,14 +3,17 @@
 
 
 
-## work for debootstrap in docker (--privileged)
-#podman run -it --rm --replace --privileged --name ubuntu-iso-factory-25.10-run ubuntu-iso-factory-25.10 /opt/src/build.sh
+##
+## ## Clean
+##
+
+rm -rf ./port
 
 
 
 
 ##
-## ## create port dir
+## ## Main
 ##
 
 mkdir -p ./port

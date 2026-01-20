@@ -32,6 +32,17 @@ REF_MASTER_BOX_DISTRO_NAME="ubuntu:25.10"
 
 
 
+
+##
+## ## Clean
+##
+
+rm -rf ./port
+rm -rf ./build
+
+
+
+
 ##
 ## ## Main
 ##
