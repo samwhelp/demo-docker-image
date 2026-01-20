@@ -18,7 +18,8 @@ REF_BASE_DIR_PATH="$(dirname "$(realpath "${0}")")"
 ##
 
 REF_PLAN_DIR_PATH="${REF_BASE_DIR_PATH}"
-#REF_PLAN_DIR_PATH="$(realpath "${REF_BASE_DIR_PATH}/..")"
+REF_PORT_DIR_PATH="${REF_PLAN_DIR_PATH}/port"
+REF_BUILD_DIR_PATH="${REF_PLAN_DIR_PATH}/build"
 
 
 
@@ -37,8 +38,8 @@ REF_MASTER_BOX_DISTRO_NAME="ubuntu:25.10"
 ## ## Clean
 ##
 
-rm -rf ./port
-rm -rf ./build
+rm -rf "${REF_PORT_DIR_PATH}"
+rm -rf "${REF_BUILD_DIR_PATH}"
 
 
 
@@ -47,7 +48,7 @@ rm -rf ./build
 ## ## Main
 ##
 
-mkdir -p ./port
+mkdir -p "${REF_PORT_DIR_PATH}"
 
 ## work for debootstrap in docker (--privileged)
-podman run -it --replace --privileged -v "${REF_PLAN_DIR_PATH}/port:/port" -v "${REF_PLAN_DIR_PATH}:/opt/prj" --name ubuntu-iso-factory-25.10-run "${REF_MASTER_BOX_DISTRO_NAME}" /opt/prj/src/build.sh
+podman run -it --replace --privileged -v "${REF_PORT_DIR_PATH}:/port" -v "${REF_PLAN_DIR_PATH}:/opt/prj" -w "/opt/prj" --name ubuntu-iso-factory-25.10-run "${REF_MASTER_BOX_DISTRO_NAME}" /opt/prj/src/build.sh
