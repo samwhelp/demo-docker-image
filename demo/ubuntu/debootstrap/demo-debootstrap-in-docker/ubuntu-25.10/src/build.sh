@@ -97,7 +97,9 @@ mod_build_prepare () {
 mod_build_create_base_rootfs_sample () {
 
 	echo
-	echo "run: debootstrap"
+	echo "##"
+	echo "## ## Run: debootstrap"
+	echo "##"
 	echo
 
 	sudo debootstrap \
@@ -113,7 +115,9 @@ mod_build_create_base_rootfs_sample () {
 mod_build_create_base_rootfs_raw () {
 
 	echo
-	echo "run: debootstrap"
+	echo "##"
+	echo "## ## Run: debootstrap"
+	echo "##"
 	echo
 
 	sudo debootstrap \
@@ -131,7 +135,9 @@ mod_build_create_base_rootfs_raw () {
 mod_build_create_base_rootfs () {
 
 	echo
-	echo "run: debootstrap"
+	echo "##"
+	echo "## ## Run: debootstrap"
+	echo "##"
 	echo
 
 
@@ -158,7 +164,9 @@ __EOF__
 mod_build_archive_base_rootfs_v001 () {
 
 	echo
-	echo "run: archive-rootfs"
+	echo "##"
+	echo "## ## Run: archive-rootfs"
+	echo "##"
 	echo
 
 	cd "${REF_DISTRO_IMG_DIR_PATH}"
@@ -173,7 +181,9 @@ mod_build_archive_base_rootfs_v001 () {
 mod_build_archive_base_rootfs () {
 
 	echo
-	echo "run: archive-rootfs"
+	echo "##"
+	echo "## ## Run: archive-rootfs"
+	echo "##"
 	echo
 
 	tar -C "${REF_DISTRO_IMG_DIR_PATH}" -cf "${REF_DISTRO_FOOTFS_FILE_PATH}" .
@@ -183,7 +193,9 @@ mod_build_archive_base_rootfs () {
 mod_build_cp_rootfs_archive_to_port_dir () {
 
 	echo
-	echo "run: copy-to-port"
+	echo "##"
+	echo "## ## Run: copy-to-port"
+	echo "##"
 	echo
 
 	sudo mkdir -p "${REF_PORT_DIR_PATH}"
@@ -200,7 +212,9 @@ mod_build_cp_rootfs_archive_to_port_dir () {
 
 
 	echo
-	echo "tips: please check port dir"
+	echo "##"
+	echo "## ## Tips: please check port dir"
+	echo "##"
 	echo
 
 
